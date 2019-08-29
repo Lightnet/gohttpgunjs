@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 	"github.com/gorilla/websocket"
-	"gogun"
+	"github.com/lightnet/gogun"
 )
 //Web Socket
 var upgrader = websocket.Upgrader{
