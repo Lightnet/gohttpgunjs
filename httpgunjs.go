@@ -43,10 +43,16 @@ func main() {
 	//http url handle and folder root
 	http.Handle("/", http.StripPrefix("/", http.FileServer(http.Dir("./public"))))
 	//init server listen
-	http.ListenAndServe(":"+PORT, nil)
-	log.Println("Listening http://localhost:"+PORT)
 	//init gun / test ?
-	var Gun gogun.GunI = gogun.Gun{}
-	Gun.Test()
+	var gun gogun.GunI = gogun.Gun{}
+	gun.Test()
+	//gun.back()
+	gun.Once()
+	fmt.Println(gun)
+
+	log.Println("Listening http://localhost:"+PORT)
 	fmt.Println("finish server & gun init...")
+	http.ListenAndServe(":"+PORT, nil)
+	//below this line will not execute
+	fmt.Println("hello world server!")
 }
