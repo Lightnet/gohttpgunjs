@@ -22,3 +22,23 @@ function send() {
     socket.send(JSON.stringify(msg));
     input.value = "";
 }
+
+function getsend() {
+    var msg = {
+        '#': "1",
+        get:"test"
+    }
+    //socket.send(input.value);
+    socket.send(JSON.stringify(msg));
+    input.value = "";
+}
+
+function putsend() {
+    var msg = {
+        '#': "1",
+        put:"test"
+    }
+    //socket.send(input.value);
+    socket.send(JSON.stringify(msg));
+    input.value = "";
+}

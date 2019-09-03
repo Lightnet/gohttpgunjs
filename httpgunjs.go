@@ -47,7 +47,7 @@ func main() {
 	var gun gogun.GunI = gogun.Gun{}
 	gun.Test()
 	//gun.back()
-	gun.Once()
+	//gun.Once()
 	fmt.Println(gun)
 
 	log.Println("Listening http://localhost:"+PORT)
